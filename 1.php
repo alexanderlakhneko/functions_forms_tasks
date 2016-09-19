@@ -10,15 +10,17 @@ function getCommonWords($a, $b){
         }
     }
     if (isset($w)){
-        return $w;
+        return array_unique($w);
     }
     else {
         return 'Нет совпадений!';
     }
 }
-$a = $_POST['a'];
-$b = $_POST['b'];
-$w = getCommonWords($a, $b);
+if (isset($_POST['a']) && isset($_POST['b'])){
+    $a = $_POST['a'];
+    $b = $_POST['b'];
+    $w = getCommonWords($a, $b);
+}
 ?>
 <!DOCTYPE html>
 <html>
