@@ -1,7 +1,7 @@
 <?php
 function save_text($text){
     $f = fopen('text_for_7.txt', 'a');
-    fwrite($f, $text . '<br>' . PHP_EOL);
+    fwrite($f, $text . '<br>');
     return;
 }
 function get_text(){
